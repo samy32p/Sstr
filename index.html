@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallo - Ism Samy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1b1b1b;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            transition: background-color 0.5s ease;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7),
+                         0 0 40px rgba(255, 255, 255, 0.6),
+                         0 0 60px rgba(255, 0, 0, 0.5),
+                         0 0 80px rgba(255, 0, 0, 0.4);
+            animation: glow 2s infinite alternate;
+        }
+
+        .content {
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+                        0 0 20px rgba(0, 255, 255, 0.3),
+                        0 0 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 40px #ff0000, 0 0 60px #ff0000;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            }
+            50% {
+                text-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f, 0 0 50px #ff007f;
+            }
+            100% {
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Drink images section */
+        .drinks {
+            display: flex;
+            flex-direction: column; /* ترتيب عمودي */
+            align-items: center; /* محاذاة في المنتصف */
+            margin-top: 30px;
+        }
+
+        .drink {
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .drink img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .drink:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sticker style */
+        .sticker {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Glowing Website</h1>
+    </header>
+    <section class="content">
+        <p>This is a simple website with a glowing effect and drinks!</p>
+        <button class="button" onclick="showAlert()">Click Me</button>
+    </section>
+    
+    <!-- Adding a dynamic sticker -->
+    <div class="sticker">New!</div>
+
+    <!-- Drink Images Section -->
+    <div class="drinks">
+        <div class="drink">
+            <img src="https://images.unsplash.com/photo-1527781967610-2c9a68f70c41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fGNhZmV8ZW58MHx8fHwxNjcwNzY3NTE4&ixlib=rb-1.2.1&q=80&w=400" alt="Drink 1">
+        </div>
+        <div class="drink">
+            <img src="https://images.unsplash.com/photo-1515378811289-69b1d4b0a0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fHdpbmUlMjBhbGNoZXB8ZW58MHx8fHwxNjcwNzY3NTE4&ixlib=rb-1.2.1&q=80&w=400" alt="Drink 2">
+        </div>
+        <div class="drink">
+            <img src="https://images.unsplash.com/photo-1567348492955-8919f0c49d5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHRhYmxldCUyMHBvcnR8ZW58MHx8fHwxNjcwNzY3NTE4&ixlib=rb-1.2.1&q=80&w=400" alt="Drink 3">
+        </div>
+        <div class="drink">
+            <img src="https://images.unsplash.com/photo-1542302029-4c7d6d7744a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxjYWZlJTIwYWxjaGV8ZW58MHx8fHwxNjcwNzY3NTE4&ixlib=rb-1.2.1&q=80&w=400" alt="Drink 4">
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert("Button clicked!");
+        }
+    </script>
+</body>
+</html>(
